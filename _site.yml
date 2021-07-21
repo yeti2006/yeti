@@ -13,3 +13,4 @@ navbar:
 output:
   html_document:
     css: theme.css
+  output_dir: "docs"
