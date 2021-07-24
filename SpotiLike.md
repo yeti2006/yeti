@@ -153,9 +153,9 @@ To fix this:
 
 * Re-run the app as adminstrator :)
 
-### How do send I hug to the author?
+### How do I send a hug to the author?
 
-You can't :/
+You can't :/ sed ;-;
 
 <br>
 <br>
