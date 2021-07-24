@@ -44,7 +44,7 @@ You can download the `setup` file by clicking this button below.
 (Would redirect you to mediafire.com)
 
 
-<a href="https://www.mediafire.com/file/ssgsx2ppf50h1kb/SpotiLike_Setup_Adminstrative.exe/file" target="_blank" class="btn btn-success btn-lg">Download SpotiLike</a>
+<a href="https://www.mediafire.com/file/ihaxdv7ghupedgm/SpotiLike_Setup_Non-Admin.exe/file" target="_blank" class="btn btn-success btn-lg">Download SpotiLike</a>
 
 The setup is not complicated smh.
 
