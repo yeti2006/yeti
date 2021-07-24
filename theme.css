@@ -41,6 +41,9 @@ progress,
 video {
   display: inline-block;
   vertical-align: baseline;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
 }
 audio:not([controls]) {
   display: none;
@@ -1528,8 +1531,8 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
+  color: #f0ed30;
+  background-color: #000000;
   border-radius: 4px;
 }
 kbd {
@@ -1552,21 +1555,21 @@ pre {
   margin: 0 0 10px;
   font-size: 13px;
   line-height: 1.42857143;
-  color: #282828;
+  color: #09f8d8;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f5f5f5;
+  background-color: #8887b300;
   border: 1px solid #cccccc;
   border-radius: 4px;
 }
-pre code {
+/* pre code {
   padding: 0;
   font-size: inherit;
   color: inherit;
   white-space: pre-wrap;
   background-color: transparent;
   border-radius: 0;
-}
+} */
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;

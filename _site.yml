@@ -17,5 +17,9 @@ navbar:
 output:
   html_document:
     css: theme.css
+    toc: true
+    toc_float: 
+      collapsed: true
+    
 
 output_dir: "."

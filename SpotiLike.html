@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>SpotiLike</title>
+
+<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="theme.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Yeti</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="projects.html">Projects</a>
+</li>
+<li>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Face Reveal</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="senukabandara2020@outlook.com">
+    <span class="fas fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/yeti2006/">
+    <span class="fab fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">SpotiLike</h1>
+
+</div>
+
+
+<p>Welcome to SpotiLike &lt;3.</p>
+<div id="what-is-spotilike" class="section level2">
+<h2>What is SpotiLike?</h2>
+<p><img src="https://digital.hbs.edu/platform-digit/wp-content/uploads/sites/2/2020/04/spotify-logo-1920x1080-2.jpg" /></p>
+<p><a href="https://spotify.com">Spotify</a> is one of the most popular <em>free</em> music streaming services out there.</p>
+<p>Spotify also gives access to a personal <em>Liked Songs</em> library and custom private playlists which is pretty cool <br> However tho, if you’re a music person like me <span style="color:cyan">you might have the need to have a collection of your favourite tracks</span> maybe in your <strong>Liked Songs</strong> library or different <strong>playlists</strong>.</p>
+<p>When that new cool-ass track starts playing and you gotta add that track to your collection, I found it annoying to return to the Spotify application which indeed interupted my workflow. It can be exasperating sometimes (<em>specially when I’m gaming</em>)</p>
+<p>So, I tried to come up with a solution myself because I couldn’t find anything online that matched my requirements:</p>
+<div class="alert alert-dismissible alert-warning">
+<h4>
+What does SpotiLike do?
+</h4>
+<p>
+This simple script lets you save what you’re listening to on-the-go into your <i>Liked Songs</i> or your playlists with a <b>custom keyboard shortcut</b> without interrupting your workflow.
+</p>
+</div>
+<hr />
+</div>
+<div id="features" class="section level2">
+<h2>Features</h2>
+<ul>
+<li>Custom hotkeys</li>
+<li>Auto-like while saving to playlists feature</li>
+<li>Prevents duplicate saves in the same playlist</li>
+</ul>
+</div>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>You can download the <code>setup</code> file by clicking this button below. <br> (Would redirect you to mediafire.com)</p>
+<p><a href="https://www.mediafire.com/file/ssgsx2ppf50h1kb/SpotiLike_Setup_Adminstrative.exe/file" target="_blank" class="btn btn-success btn-lg">Download SpotiLike</a></p>
+<p>The setup is not complicated smh.</p>
+</div>
+<div id="setup-and-configuration" class="section level2">
+<h2>Setup and Configuration</h2>
+<div class="alert alert-dismissible alert-info">
+<p><strong>Bored to read?</strong> Jump to <a href="#Showcase" class="alert-link">showcase</a> and watch the walkthrough video and stop being lazy.</p>
+</div>
+<ol style="list-style-type: decimal">
+<li><p>You would be redirected to log into your Spotify account in your browser, Log in (this could be automatic)</p></li>
+<li><p>The application would minimize itself to the System Tray.</p>
+<ul>
+<li>What is the system tray?
+<ul>
+<li><a href="https://www.youtube.com/watch?v=WxxB3ERLdE0" class="uri">https://www.youtube.com/watch?v=WxxB3ERLdE0</a></li>
+</ul></li>
+</ul></li>
+<li><p>Right click the SpotiLike icon(💚) and click <code>Config</code></p></li>
+<li><p>A file would be opened in your preferred text editor and it would contain the following:</p></li>
+</ol>
+<pre class="ini"><code>[Liked Songs]
+key=ctrl+l
+auto_like_for_playlist=yes
+
+# Have a nice day! </code></pre>
+<p>What you have to do is simple. Here are some key points:</p>
+<ul>
+<li>You can specify any key combination/key. Currently supported special keys are:
+<ul>
+<li>alt</li>
+<li>ctrl</li>
+<li>shift</li>
+<li>esc</li>
+</ul></li>
+<li>The <code>[Liked Songs]</code> section is compulsory, don’t touch it except for it’s values.
+<ul>
+<li><code>auto_like_for_playlist</code> would automatically add the song to your personal liked songs library when saving to any playlist. Change that to <code>no</code> if u don’t want it.</li>
+</ul></li>
+<li>Every new <code>[custom playlist name to appear in the notification]</code> entry would count as a playlist and it would require 2 values namely,
+<ul>
+<li>key - <em>the hotkey</em></li>
+<li>playlist - <em>the link to the playlist</em></li>
+</ul></li>
+</ul>
+<p>Here’s an example:</p>
+<pre class="ini"><code>[Liked Songs]
+key=ctrl+l
+auto_like_for_playlist=yes
+
+[My really cool playlist &lt;3] # This can be anything you want btw
+key=alt+1
+playlist=https://open.spotify.com/playlist/4DWgDHBUIsyR7sGpm08LY1?si=6fe016ea7bd0417d</code></pre>
+<p>..is all you gotta do. So pressing <code>alt</code> and <code>1</code> together would save the song to that playlist which the link you specified directs to.</p>
+<p>Also note: Saving the config file would auto reload the application so that your changes are taken place.</p>
+<p><strong>For extra clarification, please refer to the video which is right below, too.</strong></p>
+</div>
+<div id="showcase" class="section level2">
+<h2>Showcase</h2>
+<p>Here’s what our example resulted in:</p>
+<p><img src="SpotiLike/notif.gif" /></p>
+<p>Here’s me setting up my personal configuration:</p>
+<div id="walkthrough" class="section level3">
+<h3>Walkthrough:</h3>
+<video controls>
+<source src="SpotiLike/walkthrough.webm" type="video/webm">
+</video>
+<hr />
+</div>
+</div>
+<div id="faq" class="section level2">
+<h2>FAQ</h2>
+<div id="how-do-i-make-it-open-on-startup" class="section level3">
+<h3>How do I make it open on startup?</h3>
+<ul>
+<li>Press windows key + R together.</li>
+<li>Type <code>shell:startup</code> in the dialog box that appears.</li>
+<li>Copy the shortcut to the application into that folder that pops up. That’s it</li>
+</ul>
+</div>
+<div id="whats-the-icons-option-in-the-menu" class="section level3">
+<h3>What’s the icons option in the menu?</h3>
+<p>Clicking that would open the folder where the default icons are stored for the app to use.</p>
+<p>You can edit the default ones if you don’t like them but make sure their name was the exact as before and they are <code>.ico</code> files.</p>
+<p>The default icons are:</p>
+<ul>
+<li>default.ico</li>
+<li>error.ico</li>
+<li>heart.ico (This is useless.)</li>
+</ul>
+</div>
+<div id="why-do-i-get-a-timeout-error-on-startup" class="section level3">
+<h3>Why do I get a timeout error on startup?</h3>
+<p>That’s probably a connection issue.</p>
+<p>When your pc startsup, chances are the app starts before ur pc connects to the interent so the app fails to verify your credentials.</p>
+</div>
+<div id="why-cant-i-save-the-config-file" class="section level3">
+<h3>Why can’t I save the config file?</h3>
+<p>You probably need adminstrator permissions to save that.</p>
+<p>As you’re editing the config file which is situated on the <strong>Program Files</strong> folder itself, chances are you don’t have access to that.</p>
+<p>To fix this:</p>
+<ul>
+<li>Re-run the app as adminstrator :)</li>
+</ul>
+</div>
+<div id="how-do-send-i-hug-to-the-author" class="section level3">
+<h3>How do send I hug to the author?</h3>
+<p>You can’t :/</p>
+<p><br> <br></p>
+</div>
+</div>
+<div id="have-fun" class="section level2">
+<h2>Have Fun!</h2>
+<p>💖🤞💚</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
