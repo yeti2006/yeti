@@ -384,8 +384,8 @@ This simple script lets you save what you’re listening to on-the-go into your 
 <div id="installation" class="section level2">
 <h2>Installation</h2>
 <p>You can download the <code>setup</code> file by clicking this button below. <br> (Would redirect you to mediafire.com)</p>
-<p><a href="_blank" target="_blank" class="btn btn-success btn-lg">Download SpotiLike I'm sorry but coming soon</a></p>
-<p>The setup is not complicated smh.</p>
+<p><a href="https://www.mediafire.com/file/4acvsyuvoks20g7/SpotiLike_Setup.exe/file" target="_blank" class="btn btn-success btn-lg">Download SpotiLike</a></p>
+<p>The setup is not complicated smh. But in case it is, I install the app myself in the Walkthrough video below.</p>
 </div>
 <div id="setup-and-configuration" class="section level2">
 <h2>Setup and Configuration</h2>
@@ -411,13 +411,64 @@ auto_like_for_playlist=yes
 # Have a nice day! </code></pre>
 <p>What you have to do is simple. Here are some key points:</p>
 <ul>
-<li>You can specify any key combination/key. Currently supported special keys are:
+<li><p>You can specify any key combination/key. Currently supported special keys are:</p>
 <ul>
-<li>alt</li>
-<li>ctrl</li>
-<li>shift</li>
-<li>esc</li>
+<li><p>Media keys are also supported, for example: if your keyboard has support to media keys like skip songs… You can specify the key combination including it to save a song when you invoke the media key.</p></li>
+<li><p>Note, you don’t include the ‘colons’ when you specify your key combination. Just: <code>alt+caps_lock+x+x+x...</code></p></li>
 </ul></li>
+</ul>
+<pre class="py"><code>    &#39;alt&#39;,
+    &#39;backspace&#39;,
+    &#39;caps_lock&#39;,
+    &#39;ctrl&#39;,
+    &#39;cmd&#39;,
+    &#39;delete&#39;,
+    &#39;down&#39;,
+    &#39;end&#39;,
+    &#39;enter&#39;,
+    &#39;esc&#39;,
+    &#39;f1&#39;,
+    &#39;f10&#39;,
+    &#39;f11&#39;,
+    &#39;f12&#39;,
+    &#39;f13&#39;,
+    &#39;f14&#39;,
+    &#39;f15&#39;, 
+    &#39;f16&#39;,
+    &#39;f17&#39;,
+    &#39;f18&#39;,
+    &#39;f19&#39;,
+    &#39;f2&#39;,
+    &#39;f20&#39;,
+    &#39;f3&#39;,
+    &#39;f4&#39;,
+    &#39;f5&#39;,
+    &#39;f6&#39;,
+    &#39;f7&#39;,
+    &#39;f8&#39;,
+    &#39;f9&#39;,
+    &#39;home&#39;,
+    &#39;insert&#39;,
+    &#39;left&#39;,
+    &#39;media_next&#39;, 
+    &#39;media_play_pause&#39;,
+    &#39;media_previous&#39;,
+    &#39;media_volume_down&#39;
+    &#39;media_volume_mute&#39;,
+    &#39;media_volume_up&#39;,
+    &#39;menu&#39;,
+    &#39;num_lock&#39;,
+    &#39;page_down&#39;,
+    &#39;page_up&#39;,
+    &#39;pause&#39;,
+    &#39;print_screen&#39;,
+    &#39;right&#39;,
+    &#39;scroll_lock&#39;,
+    &#39;shift&#39;,
+    &#39;space&#39;,
+    &#39;tab&#39;,
+    &#39;up&#39;</code></pre>
+<ul>
 <li>The <code>[Liked Songs]</code> section is compulsory, don’t touch it except for it’s values.
 <ul>
 <li><code>auto_like_for_playlist</code> would automatically add the song to your personal liked songs library when saving to any playlist. Change that to <code>no</code> if u don’t want it.</li>
@@ -444,12 +495,15 @@ playlist=https://open.spotify.com/playlist/4DWgDHBUIsyR7sGpm08LY1?si=6fe016ea7bd
 <h2>Showcase</h2>
 <p>Here’s what our example resulted in:</p>
 <p><img src="SpotiLike/notif.gif" /></p>
-<p>Here’s me setting up my personal configuration:</p>
+<p>Here’s me setting up my personal configuration: <br> It’s really easy.</p>
 <div id="walkthrough" class="section level3">
 <h3>Walkthrough:</h3>
 <video controls>
 <source src="SpotiLike/walkthrough.webm" type="video/webm">
 </video>
+<p>CONTEXT:</p>
+<p><strong>I’m installing the application, and opening the configuration file using the menu. Then, I create an entry to a playlist with a custom name inside <code>[]</code> and give it two values. <code>key</code> and <code>playlist</code>. I copy paste the playlist link and paste it in the <code>playlist</code> value after giving <code>key</code> a combination like <code>alt+1</code>. When I save the file, the app auto-reloads itself. I press <code>alt+1</code> on my keyboard and it saves the current playing song to the playlist.</strong></p>
+<p><strong>Later I copy-paste the shortcut to <code>shell:startup</code> by opening the run dialog(See FAQ). This will make the application start by itself on Windows startup.</strong></p>
 <hr />
 </div>
 </div>
@@ -471,8 +525,8 @@ playlist=https://open.spotify.com/playlist/4DWgDHBUIsyR7sGpm08LY1?si=6fe016ea7bd
 <ul>
 <li>default.ico</li>
 <li>error.ico</li>
-<li>heart.ico (This is useless.)</li>
 </ul>
+<p><code>song.ico</code> would get updated everytime you save a song.</p>
 </div>
 <div id="why-do-i-get-a-timeout-error-on-startup" class="section level3">
 <h3>Why do I get a timeout error on startup?</h3>
@@ -481,9 +535,7 @@ playlist=https://open.spotify.com/playlist/4DWgDHBUIsyR7sGpm08LY1?si=6fe016ea7bd
 </div>
 <div id="why-cant-i-save-the-config-file" class="section level3">
 <h3>Why can’t I save the config file?</h3>
-<p>You probably need adminstrator permissions to save that.</p>
-<p>As you’re editing the config file which is situated on the <strong>Program Files</strong> folder itself, chances are you don’t have access to that.</p>
-<p>To fix this:</p>
+<p>This issue was fixed already. But if you however still have this issue (in case, you manually changed the installation location somewhere you can’t access without admin rights), you can fix it by:</p>
 <ul>
 <li>Re-run the app as adminstrator :)</li>
 </ul>
