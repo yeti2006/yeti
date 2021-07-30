@@ -8,6 +8,11 @@ navbar:
       href: "projects.html"
     - text: "Face Reveal"
       href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    - text: "Other stuff"
+      menu:
+        - text: "best dog lmao"
+        - text: "Doggy uwu"
+          href: "doggy.html"
   right: 
     - icon: fa-envelope fa-lg
       href: senukabandara2020@outlook.com
