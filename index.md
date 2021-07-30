@@ -1,5 +1,6 @@
 ---
 title: "Welcome to my site 👋"
+permalink: "index/"
 ---
 
 <img style="float: right;" width="50%" height="50%" src="https://waifu.now.sh/sfw/hug">
