@@ -14,3 +14,9 @@ title: "<3 | Projects"
   <p>Save Spotify songs to your <b>liked songs library/custom playlists</b> while you're listening to them with your own <b>custom hotkeys</b>!. This project was created mostly based on personal needs but I decided to make this public because it might come useful to some people (specially to gamers)</p>
   <p><a  href="SpotiLike.html" class="btn btn-primary btn-lg">Learn more</a></p>
 </div>
+
+<div class="jumbotron" style="background-color: #1BF59B">
+  <h1>SpotiLike 2</h1>
+  <p>GUI version.</p>
+  <p><a  href="SpotiLike_2.0.html" class="btn btn-primary btn-lg">Learn more</a></p>
+</div>

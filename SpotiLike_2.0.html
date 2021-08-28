@@ -11,7 +11,7 @@
 
 
 
-<title>&lt;3 | Projects</title>
+<title>SpotiLike v2</title>
 
 <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -363,37 +363,80 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">&lt;3 | Projects</h1>
+<h1 class="title toc-ignore">SpotiLike v2</h1>
 
 </div>
 
 
-<div id="projects-that-ive-been-working-on." class="section level4">
-<h4>Projects that I’ve been working on.</h4>
-<div class="alert alert-dismissible alert-info">
-<p><button type="button" class="close" data-dismiss="alert">×</button> <strong>Hey stalker</strong>. Most of my projects are not so advanced or, really cool. But feel free to explore and give me suggestions!</p>
+<div id="spotilike-version-2" class="section level1">
+<h1>SpotiLike version 2</h1>
+<p><code>SpotiLike</code> is a simple application that allows you to configure custom keyboard shortcuts(hotkeys), that’s gonna let you add songs to your private playlists, or your own personal liked songs library in <strong>Spotify</strong>, while you’re listening to them.</p>
+<div id="butwhats-the-point-and-why" class="section level2">
+<h2>But…what’s the point and why?</h2>
+<p>I created this project cause’ I needed a way to save my song collection with my keyboard, without returning to the Spotify application while listening.</p>
+<p>As Spotify itself doesn’t provide this functionality, I tried to find a solution.. but, I didn’t find a solution that matched my requirements so I attempted to come up with my own.</p>
+<p>The reason I found this annoying is because returning to the Spotify application interrupted my workflow, and I didn’t want to miss that cool song too ¯\_(ツ)_/¯</p>
+<p>This might come in handy if you’re a gamer and loves music.</p>
 </div>
-<div class="jumbotron" style="background-color: #1BF59B">
-<h1>
-SpotiLike
-</h1>
-<p>
-Save Spotify songs to your <b>liked songs library/custom playlists</b> while you’re listening to them with your own <b>custom hotkeys</b>!. This project was created mostly based on personal needs but I decided to make this public because it might come useful to some people (specially to gamers)
-</p>
-<p>
-<a  href="SpotiLike.html" class="btn btn-primary btn-lg">Learn more</a>
-</p>
+<div id="how-does-it-work" class="section level2">
+<h2>How does it work?</h2>
+<p>The version 2 is pretty straight forward and easy to use.</p>
+<p>After you have installed the application through the setup, it’s gonna take a while to start up at the first time. As described in the setup’s readme:</p>
+<pre class="fix"><code>The application initially fetches all your playlists and downloads the playlist&#39;s icons. This icon downloading part is the reason it might take a while. Well, depends on your interent connection.
+
+After this process is done, you can click the drop down to list all your private playlists. The default selected item would be &quot;Saved Songs&quot; and that&#39;s the option for your Liked Songs library. It&#39;s ctrl+l by default but you can change it to anything you want.
+
+Don&#39;t want a playlist to be &quot;hotkey-d&quot;? By default every playlist&#39;s hotkey is set to &quot;None&quot;. You can just leave it blank or type none if you don&#39;t want a hotkey.
+
+As you might have guessed, the format to do a hotkey is x+y+a+b+c. For example, if you wanted to register a hotkey like ctrl and f, you would type:
+
+ctrl+f in the Hotkey section :)</code></pre>
+<p>As simple as that.</p>
+<p>To register the hotkeys you can either click the “Apply Changes” button or just hit the X to close the application alternatively.<br> It would minimize itself to the system tray and register your changes!</p>
 </div>
-<div class="jumbotron" style="background-color: #1BF59B">
-<h1>
-SpotiLike 2
-</h1>
-<p>
-GUI version.
-</p>
-<p>
-<a  href="SpotiLike_2.0.html" class="btn btn-primary btn-lg">Learn more</a>
-</p>
+<div id="settings" class="section level2">
+<h2>Settings</h2>
+<p>The settings page consists of 4 options, namely:</p>
+<ul>
+<li>Fetch All your playlists</li>
+<li>Fetch Songs on startup</li>
+<li>Show notifications</li>
+<li>Auto Like With playlists</li>
+</ul>
+<table>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Fetch All your playlists</strong></td>
+<td align="center">This option is enabled by default. Fetches all your private playlists from the API. If you don’t wish to enable hotkeys for playlists and just your Liked songs library, consider disabling this setting. <em>(Faster startup: if disabled)</em></td>
+</tr>
+<tr class="even">
+<td><strong>Fetch Songs on startup</strong></td>
+<td align="center">This option would fetch the first 100 tracks from each of your private playlists. This would allow the application to prevent creating duplicate saves for a track in the same playlist. Due to a Spotify limitation, if you save a song in a playlist that has that specific song, there would be a duplicate. <em>(Faster startup: if disabled)</em></td>
+</tr>
+<tr class="odd">
+<td><strong>Show notifications</strong></td>
+<td align="center">Allow or disable notifications, when you do a hotkey.</td>
+</tr>
+<tr class="even">
+<td><strong>Auto Like With playlists</strong></td>
+<td align="center">Save the song to your liked songs library when you save to a playlist, automatically. If you saved the song to <code>x</code> playlist and you want the song to automatically get saved to your library Liked songs library too, consider enabling this option.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="errors" class="section level2">
+<h2>Errors</h2>
+<p>…</p>
 </div>
 </div>
 
