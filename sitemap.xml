@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://yeti.ga/</loc>
+    <loc>/</loc>
     <lastmod>2021-09-10T18:46:22+05:30</lastmod>
   </url><url>
-    <loc>http://yeti.ga/docs.html</loc>
+    <loc>/docs.html</loc>
   </url><url>
-    <loc>http://yeti.ga/docs/spotilike_/spotilike.html</loc>
+    <loc>/docs/spotilike_/spotilike.html</loc>
   </url><url>
-    <loc>http://yeti.ga/docs/spotilike_/spotilikev1.html</loc>
+    <loc>/docs/spotilike_/spotilikev1.html</loc>
   </url>
 </urlset>

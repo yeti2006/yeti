@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Yeti</title>
-    <link>http://yeti.ga/docs.html</link>
+    <link>/docs.html</link>
     <description>Recent content in Projects on Yeti</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://yeti.ga/docs/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SpotiLike</title>
-      <link>http://yeti.ga/docs/spotilike_/spotilike.html</link>
+      <link>/docs/spotilike_/spotilike.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://yeti.ga/docs/spotilike_/spotilike.html</guid>
+      <guid>/docs/spotilike_/spotilike.html</guid>
       <description>Welcome to SpotiLike My favourite project of em all.
 If you&amp;rsquo;re looking for my first attempt in this project(the one which requires config file typing), I suggest you head over to Version 1
 Download SpotiLike Source Repo What is SpotiLike? SpotiLike is a simple application that allows you to configure custom keyboard shortcuts(hotkeys), that&amp;rsquo;s gonna let you add songs to your private playlists, or your own personal liked songs library in Spotify, while you&amp;rsquo;re listening to them.</description>
@@ -19,10 +19,10 @@ Download SpotiLike Source Repo What is SpotiLike? SpotiLike is a simple applicat
     
     <item>
       <title>SpotiLike v1</title>
-      <link>http://yeti.ga/docs/spotilike_/spotilikev1.html</link>
+      <link>/docs/spotilike_/spotilikev1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://yeti.ga/docs/spotilike_/spotilikev1.html</guid>
+      <guid>/docs/spotilike_/spotilikev1.html</guid>
       <description>asd</description>
     </item>
     
