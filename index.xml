@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Yeti</title>
-    <link>http://yeti.ga/docs/</link>
-    <description>Recent content in Projects on Yeti</description>
+    <title>Home on Yeti</title>
+    <link>http://yeti.ga/</link>
+    <description>Recent content in Home on Yeti</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://yeti.ga/docs/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Sep 2021 18:46:22 +0530</lastBuildDate><atom:link href="http://yeti.ga/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SpotiLike</title>
       <link>http://yeti.ga/docs/spotilike_/spotilike/</link>
