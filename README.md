@@ -1,2 +1,0 @@
-# yeti
-My website
