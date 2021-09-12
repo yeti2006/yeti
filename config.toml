@@ -1,0 +1,32 @@
+
+builddrafts = true 
+relativeURLs = true
+uglyURLs = true
+baseURL = "http://yeti2006.github.io/"
+languageCode = "en-us"
+title = "Yeti"
+theme = "compose"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[outputs]
+  home = ["HTML", "RSS","JSON"]
+
+#  menu items
+[[menu.main]]
+  name = "Github"
+  weight = 2
+  url = "https://github.com/yeti2006"
+
+
+[params]
+
+    centerLogo = true
+
+    enableDarkMode = true
+    introDescription = "Yoooooooo"
+
+    [params.logo] 
+
+        darkMode = "https://cdn.discordapp.com/avatars/652407551849267200/a_e87af8e016c9171d7ab82ba89538735f.gif"
+        lightMode = "https://cdn.discordapp.com/avatars/652407551849267200/a_e87af8e016c9171d7ab82ba89538735f.gif"
