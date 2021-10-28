@@ -9,6 +9,15 @@
     <lastBuildDate>Fri, 10 Sep 2021 18:46:22 +0530</lastBuildDate><atom:link href="https://yeti.ga/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
+      <link>https://yeti.ga/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeti.ga/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://yeti.ga/spotilike/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -19,22 +28,25 @@
     
     <item>
       <title>SpotiLike</title>
-      <link>https://yeti.ga/docs/spotilike_/spotilike/</link>
+      <link>https://yeti.ga/docs/spotilike_/v2/spotilike/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yeti.ga/docs/spotilike_/spotilike/</guid>
+      <guid>https://yeti.ga/docs/spotilike_/v2/spotilike/</guid>
       <description>Welcome to SpotiLike My favourite project of em all.
 If you&amp;rsquo;re looking for my first attempt in this project(the one which requires config file typing), I suggest you head over to Version 1
-Download SpotiLike Source Repo What is SpotiLike? SpotiLike is a simple application that allows you to configure custom keyboard shortcuts(hotkeys), that&amp;rsquo;s gonna let you add songs to your private playlists, or your own personal liked songs library in Spotify, while you&amp;rsquo;re listening to them.</description>
+Download SpotiLike Source Repo YouTube video What is SpotiLike? SpotiLike is a simple application that allows you to configure custom keyboard shortcuts(hotkeys), that&amp;rsquo;s gonna let you add songs to your private playlists, or your own personal liked songs library in Spotify, while you&amp;rsquo;re listening to them.</description>
     </item>
     
     <item>
       <title>SpotiLike v1</title>
-      <link>https://yeti.ga/docs/spotilike_/spotilikev1/</link>
+      <link>https://yeti.ga/docs/spotilike_/v1/spotilikev1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yeti.ga/docs/spotilike_/spotilikev1/</guid>
-      <description>Undocumented, coming soon. use version 2 lol</description>
+      <guid>https://yeti.ga/docs/spotilike_/v1/spotilikev1/</guid>
+      <description>Hi! This is my first attempt in creating &amp;ldquo;an app that would let you save Spotify songs using your keyboard with a custom keyboard shortcut.&amp;rdquo;
+It&amp;rsquo;ll be great if you use version 2 since this is boring :/
+SpotiLike v1 I&amp;rsquo;ll be going through how to use this only, why and what can be learned if you head over here.
+Configuration After installation, the app would auto minimize itself to the System Tray.</description>
     </item>
     
   </channel>

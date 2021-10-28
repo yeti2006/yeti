@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Go Away</title>
+    <meta name="description" content="Haha best dog ever uwu, FUCK YOU, bitcj/">
+    <meta name="author" content="Yeti">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        @keyframes rainbow {
+
+            100%,
+            0% {
+                color: rgb(255, 0, 0);
+            }
+
+            8% {
+                color: rgb(255, 127, 0);
+            }
+
+            16% {
+                color: rgb(255, 255, 0);
+            }
+
+            25% {
+                color: rgb(127, 255, 0);
+            }
+
+            33% {
+                color: rgb(0, 255, 0);
+            }
+
+            41% {
+                color: rgb(0, 255, 127);
+            }
+
+            50% {
+                color: rgb(0, 255, 255);
+            }
+
+            58% {
+                color: rgb(0, 127, 255);
+            }
+
+            66% {
+                color: rgb(0, 0, 255);
+            }
+
+            75% {
+                color: rgb(127, 0, 255);
+            }
+
+            83% {
+                color: rgb(255, 0, 255);
+            }
+
+            91% {
+                color: rgb(255, 0, 127);
+            }
+        }
+
+        html,
+        body {
+            user-select: none;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        p {
+            animation: rainbow 1s infinite;
+            font-family: impact, roboto;
+            font-weight: 900;
+            -webkit-text-stroke: 3px black;
+            font-size: 100px;
+            border: none;
+            margin: auto;
+            text-align: center;
+        }
+
+        #vid-wrap,
+        #top {
+            position: absolute;
+            z-index: 0;
+            border: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #top {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            pointer-events: none;
+            position: relative;
+            left: 450px;
+            top: 2px;
+        }
+
+        .space {
+            flex-grow: 1;
+        }
+
+        #vid-wrap {
+            padding-bottom: calc(900% / 16);
+        }
+
+        #vid {
+            position: absolute;
+            border: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin-top: calc(-900% / 32);
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+            #vid-wrap {
+                padding-bottom: 0;
+                padding-right: calc(1600% / 9);
+            }
+
+            #vid {
+                margin-top: 0;
+                margin-left: calc(-1600% / 50);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="vid-wrap">
+        <iframe id="vid" frameborder="0"
+            src="https://youtube.com/embed/W9paQ-ZmvbI?autoplay=1&controls=0&showinfo=0&autohide=1&autoplay=1">
+        </iframe>
+    </div>
+
+    <div id="top">
+        <div class="text">
+            <p>Send<br>Nudes</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

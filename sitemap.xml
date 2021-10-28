@@ -5,12 +5,14 @@
     <loc>https://yeti.ga/</loc>
     <lastmod>2021-09-10T18:46:22+05:30</lastmod>
   </url><url>
+    <loc>https://yeti.ga/search/</loc>
+  </url><url>
     <loc>https://yeti.ga/spotilike/</loc>
   </url><url>
     <loc>https://yeti.ga/docs/</loc>
   </url><url>
-    <loc>https://yeti.ga/docs/spotilike_/spotilike/</loc>
+    <loc>https://yeti.ga/docs/spotilike_/v2/spotilike/</loc>
   </url><url>
-    <loc>https://yeti.ga/docs/spotilike_/spotilikev1/</loc>
+    <loc>https://yeti.ga/docs/spotilike_/v1/spotilikev1/</loc>
   </url>
 </urlset>
