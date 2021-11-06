@@ -9,6 +9,17 @@
     <lastBuildDate>Fri, 10 Sep 2021 18:46:22 +0530</lastBuildDate><atom:link href="https://yeti.ga/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
+      <link>https://yeti.ga/school/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeti.ga/school/</guid>
+      <description>Discord Hello world!
+ Fuck you
+ hey</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://yeti.ga/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
