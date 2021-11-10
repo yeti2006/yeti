@@ -1,0 +1,4 @@
+img[src$='#floatright']{
+    float:right;
+    margin: 10rem;
+}
