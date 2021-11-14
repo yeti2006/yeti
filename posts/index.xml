@@ -5,7 +5,21 @@
     <link>https://yeti-is-god.ml/posts/</link>
     <description>Recent content in Posts on Yeti</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://yeti-is-god.ml/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Nov 2021 20:03:52 +0530</lastBuildDate><atom:link href="https://yeti-is-god.ml/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started on a Discord Bot</title>
+      <link>https://yeti-is-god.ml/posts/getting-started-on-a-discord-bot/</link>
+      <pubDate>Sat, 13 Nov 2021 19:57:39 +0530</pubDate>
+      
+      <guid>https://yeti-is-god.ml/posts/getting-started-on-a-discord-bot/</guid>
+      <description>Introduction First of all, the major wrapper library, which was called discord.py, for developing discord bots in python is currently being discontinued. You can see a full depth in-detail description by the project author in this gist linked below. Sadly though, yea.
+But, continued and maintained forks of the library are available.
+Honest opinon: almost every fork is shit
+Why does Danny(Rapptz) no longer maintains discord.py [gist]
+The last discord.</description>
+    </item>
+    
     <item>
       <title>How to bypass OpenDNS security?</title>
       <link>https://yeti-is-god.ml/posts/how-to-bypass-opendns/</link>

@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yeti-is-god.ml/posts/</loc>
+    <lastmod>2021-11-13T20:03:52+05:30</lastmod>
+  </url><url>
+    <loc>https://yeti-is-god.ml/posts/getting-started-on-a-discord-bot/</loc>
+    <lastmod>2021-11-13T19:57:39+05:30</lastmod>
+  </url><url>
     <loc>https://yeti-is-god.ml/</loc>
     <lastmod>2021-09-10T18:46:22+05:30</lastmod>
   </url><url>
@@ -12,8 +18,6 @@
     <loc>https://yeti-is-god.ml/spotilike/</loc>
   </url><url>
     <loc>https://yeti-is-god.ml/posts/how-to-bypass-opendns/</loc>
-  </url><url>
-    <loc>https://yeti-is-god.ml/posts/</loc>
   </url><url>
     <loc>https://yeti-is-god.ml/docs/</loc>
   </url><url>
