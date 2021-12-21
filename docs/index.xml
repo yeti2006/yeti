@@ -7,6 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://yeti-is-god.ml/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Kitsupy</title>
+      <link>https://yeti-is-god.ml/docs/kitsupy/kitsupy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yeti-is-god.ml/docs/kitsupy/kitsupy/</guid>
+      <description>Welcome to the Kitsupy Documentation!
+This documentation contains includes 4 main sections:
+ General  Installation Simple usage example   KitsuClient  KitsuClient get_anime get_character get_episode get_manga trending_anime   Pagination  limits &amp;amp; offset next method   Object reference  Anime Manga Character Titles Images    General Kitsupy is a simple asynchronous wrapper around https://kitsu.io JSON:API.
+This library uses aiohttp for the requests.
+Installation You can install through github:</description>
+    </item>
+    
+    <item>
       <title>SpotiLike</title>
       <link>https://yeti-is-god.ml/docs/spotilike_/v2/spotilike/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

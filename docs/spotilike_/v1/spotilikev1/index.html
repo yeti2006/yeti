@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" class="dark">
 <head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Hugo 0.88.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Hugo 0.80.0" />
 <link rel="apple-touch-icon" sizes="180x180" href='https://yeti-is-god.ml/favicons/apple-touch-icon.png'>
 <link rel="icon" type="image/png" sizes="32x32" href='https://yeti-is-god.ml/favicons/favicon-32x32.png'>
 <link rel="icon" type="image/png" sizes="16x16" href='https://yeti-is-god.ml/favicons/favicon-16x16.png'>
@@ -16,9 +16,7 @@ It&rsquo;ll be great if you use version 2 since this is boring :/
 SpotiLike v1 I&rsquo;ll be going through how to use this only, why and what can be learned if you head over here.
 Configuration After installation, the app would auto minimize itself to the System Tray." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yeti-is-god.ml/docs/spotilike_/v1/spotilikev1/" /><meta property="article:section" content="docs" />
-
-
+<meta property="og:url" content="https://yeti-is-god.ml/docs/spotilike_/v1/spotilikev1/" />
 
 <meta itemprop="name" content="SpotiLike v1">
 <meta itemprop="description" content="Hi! This is my first attempt in creating &ldquo;an app that would let you save Spotify songs using your keyboard with a custom keyboard shortcut.&rdquo;
@@ -27,7 +25,11 @@ SpotiLike v1 I&rsquo;ll be going through how to use this only, why and what can 
 Configuration After installation, the app would auto minimize itself to the System Tray.">
 
 <meta itemprop="wordCount" content="552">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SpotiLike v1"/>
 <meta name="twitter:description" content="Hi! This is my first attempt in creating &ldquo;an app that would let you save Spotify songs using your keyboard with a custom keyboard shortcut.&rdquo;
 It&rsquo;ll be great if you use version 2 since this is boring :/
@@ -44,6 +46,7 @@ Configuration After installation, the app would auto minimize itself to the Syst
 It&amp;rsquo;ll be great if you use version 2 since this is boring :/
 SpotiLike v1 I&amp;rsquo;ll be going through how to use this only, why and what can be learned if you head over here.
 Configuration After installation, the app would auto minimize itself to the System Tray.">
+
 
 </head>
 <body class="page-page" id="pagetop">
@@ -107,6 +110,37 @@ Configuration After installation, the app would auto minimize itself to the Syst
   <section class="section aside_inner">
     <h2 class="section_title"><a  href="https://yeti-is-god.ml/docs/" class="group">Projects</a></h2>
       <section class="" id="docs-projects">
+        <h3 class="section_link"><a id="docs-kitsupy" href="https://yeti-is-god.ml/docs/kitsupy/kitsupy/">Kitsupy</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#general">General</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#simple-usage-example">Simple usage example</a></li>
+      </ul>
+    </li>
+    <li><a href="#kitsuclient">KitsuClient</a>
+      <ul>
+        <li><a href="#kitsukitsuclient">kitsu.KitsuClient</a></li>
+        <li><a href="#kitsukitsuclientget_anime">kitsu.KitsuClient.get_anime</a></li>
+        <li><a href="#kitsukitsuclientget_character">kitsu.KitsuClient.get_character</a></li>
+        <li><a href="#kitsukitsuclientget_episode">kitsu.KitsuClient.get_episode</a></li>
+        <li><a href="#kitsukitsuclientget_manga">kitsu.KitsuClient.get_manga</a></li>
+        <li><a href="#kituskitsuclienttrending_anime">kitus.KitsuClient.trending_anime</a></li>
+      </ul>
+    </li>
+    <li><a href="#pagination">Pagination</a>
+      <ul>
+        <li><a href="#limits--offset">Limits &amp; Offset</a></li>
+        <li><a href="#next-method">next method</a></li>
+      </ul>
+    </li>
+    <li><a href="#object-reference">Object Reference</a>
+      <ul>
+        <li><a href="#kitsuanime">kitsu.Anime</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
         <h3 class="section_link"><a id="docs-spotilike" href="https://yeti-is-god.ml/docs/spotilike_/v2/spotilike/">SpotiLike</a></h3><nav id="TableOfContents">
   <ul>
     <li><a href="#youtube-video">YouTube video</a></li>
@@ -156,7 +190,7 @@ Configuration After installation, the app would auto minimize itself to the Syst
 
 <h3 id="key-values">Key-values</h3>
 <p>When you first open the file it would look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[Liked Songs]</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[Liked Songs]</span>
 <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span><span style="color:#e6db74">ctrl+l</span>
 <span style="color:#a6e22e">auto_like_for_playlist</span><span style="color:#f92672">=</span><span style="color:#e6db74">yes</span>
 
@@ -168,7 +202,7 @@ Configuration After installation, the app would auto minimize itself to the Syst
 <li>playlist - <em>playlist url</em></li>
 </ul>
 <p>Have a look at this example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[Liked Songs]</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[Liked Songs]</span>
 <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span><span style="color:#e6db74">ctrl+l</span>
 <span style="color:#a6e22e">auto_like_for_playlist</span><span style="color:#f92672">=</span><span style="color:#e6db74">yes</span>
 

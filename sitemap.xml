@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://yeti-is-god.ml/posts/</loc>
     <lastmod>2021-11-13T20:03:52+05:30</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://yeti-is-god.ml/posts/getting-started-on-a-discord-bot/</loc>
     <lastmod>2021-11-13T19:57:39+05:30</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://yeti-is-god.ml/</loc>
     <lastmod>2021-09-10T18:46:22+05:30</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://yeti-is-god.ml/school/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://yeti-is-god.ml/search/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://yeti-is-god.ml/spotilike/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://yeti-is-god.ml/posts/how-to-bypass-opendns/</loc>
-  </url><url>
+  </url>
+  
+  <url>
+    <loc>https://yeti-is-god.ml/docs/kitsupy/kitsupy/</loc>
+  </url>
+  
+  <url>
     <loc>https://yeti-is-god.ml/docs/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://yeti-is-god.ml/docs/spotilike_/v2/spotilike/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://yeti-is-god.ml/docs/spotilike_/v1/spotilikev1/</loc>
   </url>
+  
 </urlset>
