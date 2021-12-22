@@ -26,7 +26,7 @@ This documentation contains includes 4 main sections:
 This library uses aiohttp for the requests.
 Installation You can install through github:">
 
-<meta itemprop="wordCount" content="1158">
+<meta itemprop="wordCount" content="1438">
 
 
 
@@ -401,7 +401,7 @@ returns: [kitsu<span style="color:#f92672">.</span>Anime, kitus<span style="colo
 <li>
 <p><code>.id</code></p>
 <ul>
-<li>type: int`</li>
+<li>type: int</li>
 <li>description: The API based ID of the object.</li>
 </ul>
 </li>
@@ -455,52 +455,212 @@ returns: [kitsu<span style="color:#f92672">.</span>Anime, kitus<span style="colo
 </ul>
 </li>
 <li>
-<p><code>rating_frequencies</code></p>
+<p><code>.rating_frequencies</code></p>
 <ul>
 <li>type: dict</li>
 <li>description: The rating frequencies of the anime.</li>
 </ul>
 </li>
 <li>
-<p><code>user_count</code></p>
+<p><code>.user_count</code></p>
 <ul>
 <li>type: int</li>
 <li>description: The number of users of the anime.</li>
 </ul>
 </li>
 <li>
-<p><code>favorites_count</code></p>
+<p><code>.favorites_count</code></p>
 <ul>
 <li>type: int</li>
 <li>description: The number of users who have favorited the anime.</li>
 </ul>
 </li>
 <li>
-<p><code>start_date</code></p>
+<p><code>.start_date</code></p>
 <ul>
 <li>type: datetime.datetime</li>
 <li>description: The start date of the anime.</li>
 </ul>
 </li>
 <li>
-<p><code>end_date</code></p>
+<p><code>.end_date</code></p>
 <ul>
 <li>type: datetime.datetime</li>
 <li>description: The end date of the anime.</li>
 </ul>
 </li>
 <li>
-<p><code>popularity_rank</code></p>
+<p><code>.popularity_rank</code></p>
 <ul>
 <li>type: int</li>
 <li>description: The rank number of the anime according to popularity.</li>
 </ul>
 </li>
 <li>
-<p><code>rating_rank</code></p>
+<p><code>.rating_rank</code></p>
 <ul>
 <li>type: int</li>
 <li>description: The rank number of the anime according to it&rsquo;s rating.</li>
+</ul>
+</li>
+<li>
+<p><code>.age_rating</code></p>
+<ul>
+<li>type: str</li>
+<li>description: The age rating string of the anime. This can be one of the following:
+<ul>
+<li>G - General Audiences</li>
+<li>PG - Parental Guidance Suggested</li>
+<li>R - Restricted</li>
+<li>R18 - Explict</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>.age_rating_guide</code></p>
+<ul>
+<li>type: str</li>
+<li>description: The guide of the age rating.</li>
+</ul>
+</li>
+<li>
+<p><code>.subtype</code></p>
+<ul>
+<li>type: str</li>
+<li>description: The subtype of the anime.</li>
+</ul>
+</li>
+<li>
+<p><code>.status</code></p>
+<ul>
+<li>type: str</li>
+<li>description: The status of the anime.</li>
+</ul>
+</li>
+<li>
+<p><code>.tba</code></p>
+<ul>
+<li>type: str</li>
+<li>description: The tba of the anime.</li>
+</ul>
+</li>
+<li>
+<p><code>.images</code></p>
+<ul>
+<li>type: kitsu.Images</li>
+<li>description: An Images object containing the poster image and cover image data.</li>
+</ul>
+</li>
+<li>
+<p><code>.episode_count</code></p>
+<ul>
+<li>type: int</li>
+<li>description: The number of episodes of the anime.</li>
+</ul>
+</li>
+<li>
+<p><code>.episode_length</code></p>
+<ul>
+<li>type: int</li>
+<li>description: The altogether length of the episodes of the anime.</li>
+</ul>
+</li>
+<li>
+<p><code>.youtube_id</code></p>
+<ul>
+<li>type: str</li>
+<li>description: A YouTube video ID that points to a trailer of the anime.</li>
+</ul>
+</li>
+<li>
+<p><code>.youtube_url</code></p>
+<ul>
+<li>type: str</li>
+<li>description: A full YouTube URL  to a trailer of the anime if there&rsquo;s a youtube ID available.</li>
+</ul>
+</li>
+<li>
+<p><code>.nsfw</code></p>
+<ul>
+<li>type: bool</li>
+<li>description: Returns True if the anime is nsfw rated or False if not.</li>
+</ul>
+</li>
+<li>
+<p><code>._original_genres</code></p>
+<ul>
+<li>type: list</li>
+<li>description: A list of dictionaries containing the original genre data from the API. This data includes:
+<ul>
+<li>id</li>
+<li>name</li>
+<li>description</li>
+<li>slug</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>.genres</code></p>
+<ul>
+<li>type: list</li>
+<li>description: A list of genre names of the anime.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Methods</strong> :</p>
+<ul>
+<li>
+<p><code>await kitsu.Anime.episodes(limit: int = 1)</code></p>
+<ul>
+<li>
+<p>Parameters:</p>
+<ul>
+<li><code>limit</code>:
+<ul>
+<li>type: int</li>
+<li>description: The limit of results to get.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Returns:</p>
+<ul>
+<li>kitsu.AnimeEpisode | A list of objects or one depending on the number of results.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>await kitsu.Anime.streaming_links()</code></p>
+<ul>
+<li>Returns:
+<ul>
+<li>kitsu.StreamingLinks | A list of objects or one depending on the number of results.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>await kitsu.Anime.characters()</code></p>
+<ul>
+<li>Returns:
+<ul>
+<li>kitus.Character | A list of objects or one depending on the number of results.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>await kitsu.Anime.anime_characters()</code></p>
+<ul>
+<li>Returns:
+<ul>
+<li>kitus.Character | A list of objects or one depending on the number of results.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
